@@ -128,6 +128,7 @@ def mayor_suma(lista_usuario): # Función para ver cual es la mayor suma entre 2
         else:                                     # Cuando se encuantra una suma mayor a la anterior se cambia ese nuevo mayor para ser el estandar de comparación
             mayor_suma=suma_actual
     print("La mayor suma de 2 elementos de la lista consecutivos es: " + str(mayor_suma))
+
 if __name__ == "__main__":    # Función main para que el usuario ingrese la lista de números
     cantidad_numeros = int(input("Ingrese la cantidad de números de la lista: "))
     for i in range (cantidad_numeros):      # Un for que se repite según la cantidad de números que desea ingresar el usuario
