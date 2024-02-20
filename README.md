@@ -4,6 +4,8 @@
 
 **1.** Crear una función que realice operaciones básicas (suma, resta, multiplicación, división) entre dos números, según la elección del usuario, la forma de entrada de la función será los dos operandos y el caracter usado para la operación. entrada: (1,2,"+"), salida (3).
 
+La función main le solicita al usuario ingresar los 2 números con los que desea realizar la operación correspondiente. Además, se le solicita ingresar el simbolo correspondiente a la operación que desea realizar entre ellos. Se llama la función "operaciones", la cual está compuesta por un condicional que realizará la operación requerida que haya seleccionado el usuario en la función main. La función retornará el resultado de la operación.
+
 * Mirar archivo Punto_1.py
 
 ```python
@@ -44,6 +46,8 @@ if __name__ == "__main__":    # Función main para que el usuario ingrese los n�
 
 **2.** Realice una función que permita validar si una palabra es un palíndromo. Condición: No se vale hacer slicing para invertir la palabra y verificar que sea igual a la original.
 
+La función main le solicita al usuario ingresar la palabra que desea verificar si es un palíndromo, se llama la función "verificar_si_es_palíndromo" para realizar las operaciones correspondientes. Esta función hace usos de varios for para invertir el orden de los caracteres de la palabra original, si al invertirla la posición de los caracteres es el mismo se mostrara un mensaje informando que si es un palíndromo, de lo contrario, se mostrará que no lo es.
+
 * Mirar archivo Punto_2.py
 
 ```python
@@ -62,7 +66,7 @@ def verificar_si_es_palíndromo(palabra): # Función para verificar si la palabr
     
     palabra_al_reves = ''.join(caracteres)  # Para volver esos caracteres de la palabra al reves en un str
 
-    for i in range(longitud_palabra):       # Para verificar si el caracter en la ubicación en la palabra original y la invertida es el ismo
+    for i in range(longitud_palabra):       # Para verificar si el caracter en la ubicación en la palabra original y la invertida es el mismo
         if palabra_min[i]==palabra_al_reves[i]:
             continue
         else:
@@ -77,6 +81,8 @@ if __name__ == "__main__":    # Función main para que el usuario ingrese los n�
 ```
 
 **3.** Escribir una función que reciba una lista de números y devuelva solo aquellos que son primos. La función debe recibir una lista de enteros y retornar solo aquellos que sean primos.
+
+En la función main se le pide al usuario ingresar la cantidad de elementos que tendrá su lista, luego haciedo uso de un for se le solicita ingresar esa cantidad de números a la lista, se llama la función "verificar_si_es_primo". Dentro de esta función hay un for anidado, en el cual, se va seleccionando cada elemento de la lista y se busca cuales son sus divisores; si al final de este proceso con cada número la cantidad de divisores de ese número seleccionado es igual a 2 se va a añadir el elemento a la lista de números primos (ya que se cumple la condición de que solamente sea divisible por 1 y por el mismo) y se procederá a evaluar los divisores del siguiente número. Finalmente un condicional if evalua si hay elementos dentro de la lista números primos, y de haberlos, procede a mostrarle al usuario cuáles de los números ingresados son primos.
 
 * Mirar archivo Punto_3.py
 
@@ -113,6 +119,8 @@ if __name__ == "__main__":    # Función main para que el usuario ingrese los n�
 
 **4.** Escribir una función que reciba una lista de números enteros y retorne la mayor suma entre dos elementos consecutivos.
 
+En la función main se le pide al usuario ingresar la cantidad de elementos que tendrá su lista, luego haciedo uso de un for se le solicita ingresar esa cantidad de números a la lista, se llama la función "mayor_suma". Dentro de esta función hay un for que va realizando la suma de dos números consecutivos de la lista y se va estableciendo en la variable mayor_suma, cada vez que el programa realice una nueva suma se comparará con el resultado anterior; en caso de ser mayor el nuevo ese será el nuevo valor de la variable, de lo contrario se seguira comparando con la suma anterior. Luego de evaluar todas las sumas el programa mostrará la de mayor valor.
+
 * Mirar archivo Punto_4.py
 
 ```python
@@ -138,6 +146,8 @@ if __name__ == "__main__":    # Función main para que el usuario ingrese la lis
 ```
 
 **5.** Escribir una función que reciba una lista de string y retorne unicamente aquellos elementos que tengan los mismos caracteres. e.g. entrada: ["amor", "roma", "perro"], salida ["amor", "roma"]
+
+En la función main se le pide al usuario ingresar la cantidad de elementos que tendrá su lista, luego haciedo uso de un for se le solicita ingresar esa cantidad de palabras a la lista, se llama la función "igualdad_caracteres". Dentro de esta función hay un primer for el cual ordenará los caracteres de cada palabra en orden alfabetico; un segundo for que evalua si hay palabras repetidas dentro de la lista ya que por defecto tendrán los mismos caracteres, estas palabras se irán añadiendo a la lista de palabras repetidas; un tercer for revisa si dentro de la lista de elementos ordenados alfabeticamente hay alguno que sea igual para añadirlo a loa lista de "mismos_caracteres"; finalmente se sumarán esas dos listas obtenidas para mostrarle al usuario cuales de esas palabras tienen los mismos caracteres.
 
 * Mirar archivo Punto_5.py
 
